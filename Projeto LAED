@@ -80,34 +80,38 @@ setlocale(LC_ALL, "Portuguese");
 
                         //SE OPÇÃO DIGITADA FOR DIFERENTE DE 1,2,3 e 4, APAGA A TELA E IMPRIME A MENSAGEM DE OPÇÃO INVÁLIDA
                            if((porcao!= 1) && (porcao != 2) && (porcao != 3) && (porcao != 4)){
+
+                                printf("Opção inválida. Por favor, tecle ENTER para selecionar novamente!\n\n");
+                                //UTILIZA A FUNÇÃO GETCHAR(); DUAS VEZES PARA QUE O SOFTWARE AGUARDE ATÉ O USUÁRIO TECLAR ENTER PARA CONTINUAR
+                                getchar();
+                                getchar();
                                 system("cls");
-                                printf("Opção inválida. Por favor, tente novamente!\n\n");
-                             }
-
-                        else{
-                        printf("\nDeseja algo mais?\n");
-                        printf("1- Sim\n");
-                        printf("2- Não\n");
-                        scanf("%d", &decisao);
-
-                            //SE SELECIONADO 1 MANTÉM DENTRO DO LAÇO DE REPETÇÃO
-                            if(decisao == 1){
-                            system("cls");
                             }
+                            else{
+                                printf("\nDeseja algo mais?\n");
+                                printf("1- Sim\n");
+                                printf("2- Não\n");
+                                scanf("%d", &decisao);
 
-                            //SE SELECIONADO 2 SAI DO LAÇO DE REPETIÇÃO
-                            if(decisao == 2){
-                                menu = fim;
+                                //SE SELECIONADO 1 MANTÉM DENTRO DO LAÇO DE REPETÇÃO
+                                if(decisao == 1){
+                                    system("cls");
+                                }
 
-                            /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
-                             VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
-                             VALORES DE ACORDO COM O PEDIDOS */
-                            printf("\nTotal do pedido: R$%5.2f", total);
-                            printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
-                            printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
+                                //SE SELECIONADO 2 SAI DO LAÇO DE REPETIÇÃO
+                                if(decisao == 2){
+                                    menu = fim;
+                                    system("cls");
+
+                                    /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
+                                        VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
+                                        VALORES DE ACORDO COM O PEDIDOS */
+                                    printf("\nTotal do pedido: R$%5.2f", total);
+                                    printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
+                                    printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
+                                }
+                            }
                         }
-                    }
-                 }
 
                 //OPÇÃO SOBREMESA
                 if(menu == 2){
@@ -144,8 +148,12 @@ setlocale(LC_ALL, "Portuguese");
 
                             //SE OPÇÃO DIGITADA FOR DIFERENTE DE 1,2,3 e 4, APAGA A TELA E IMPRIME A MENSAGEM DE OPÇÃO INVÁLIDA
                              if((sobremesa != 1) && (sobremesa != 2) && (sobremesa != 3) && (sobremesa != 4)){
+
+                                printf("Opção inválida. Por favor, tecle ENTER para selecionar novamente!\n\n");
+                                //UTILIZA A FUNÇÃO GETCHAR(); DUAS VEZES PARA QUE O SOFTWARE AGUARDE ATÉ O USUÁRIO TECLAR ENTER PARA CONTINUAR
+                                getchar();
+                                getchar();
                                 system("cls");
-                                printf("Opção inválida. Por favor, tente novamente!\n\n");
                              }
 
                         else{
@@ -161,10 +169,11 @@ setlocale(LC_ALL, "Portuguese");
                             //SE SELECIONADO 2 SAI DO LAÇO DE REPETIÇÃO
                             if(decisao == 2){
                             menu = fim;
+                            system("cls");
 
                             /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
-                             VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
-                             VALORES DE ACORDO COM O PEDIDOS */
+                                VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
+                                VALORES DE ACORDO COM O PEDIDOS */
                             printf("\nTotal do pedido: R$%5.2f", total);
                             printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
                             printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
@@ -207,38 +216,46 @@ setlocale(LC_ALL, "Portuguese");
 
                             //SE OPÇÃO DIGITADA FOR DIFERENTE DE 1,2,3 e 4, APAGA A TELA E IMPRIME A MENSAGEM DE OPÇÃO INVÁLIDA
                             if((bebidas!= 1) && (bebidas != 2) && (bebidas != 3) && (bebidas != 4)){
+
+                                printf("Opção inválida. Por favor, tecle ENTER para selecionar novamente!\n\n");
+                                //UTILIZA A FUNÇÃO GETCHAR(); PARA QUE O SOFTWARE AGUARDE ATÉ O USUÁRIO TECLAR ENTER PARA CONTINUAR
+                                getchar();
+                                getchar();
                                 system("cls");
-                                printf("Opção inválida. Por favor, tente novamente!\n\n");
-                             }
-
-                        else{ printf("\nDeseja algo mais?\n");
-                        printf("1- Sim\n");
-                        printf("2- Não\n");
-                        scanf("%d", &decisao);
-
-                            //SE SELECIONADO 1 MANTÉM DENTRO DO LAÇO DE REPETÇÃO
-                            if(decisao == 1){
-                            system("cls");
                             }
+                            else{
+                                printf("\nDeseja algo mais?\n");
+                                printf("1- Sim\n");
+                                printf("2- Não\n");
+                                scanf("%d", &decisao);
 
-                            //SE SELECIONADO 2 SAI DO LAÇO DE REPETIÇÃO
-                            if(decisao == 2){
-                                menu = fim;
+                                //SE SELECIONADO 1 MANTÉM DENTRO DO LAÇO DE REPETÇÃO
+                                if(decisao == 1){
+                                    system("cls");
+                                }
 
-                            /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
-                             VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
-                             VALORES DE ACORDO COM OS PEDIDOS */
-                            printf("\nTotal do pedido: R$%5.2f", total);
-                            printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
-                            printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
+                                //SE SELECIONADO 2 SAI DO LAÇO DE REPETIÇÃO
+                                if(decisao == 2){
+                                    menu = fim;
+                                    system("cls");
+
+                                    /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
+                                        VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
+                                        VALORES DE ACORDO COM O PEDIDOS */
+                                    printf("\nTotal do pedido: R$%5.2f", total);
+                                    printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
+                                    printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
+                                }
+                            }
                         }
                     }
-                 }
-            }
-            else{
-                system("cls");
-                printf("Opção inválida. Por favor, tente novamente!\n\n");
-            }
+                    else{
+                        printf("Opção inválida. Por favor, tecle ENTER para selecionar novamente!\n\n");
+                        //UTILIZA A FUNÇÃO GETCHAR(); DUAS VEZES PARA QUE O SOFTWARE AGUARDE ATÉ O USUÁRIO TECLAR ENTER PARA CONTINUAR
+                        getchar();
+                        getchar();
+                        system("cls");
+                    }
 
         /* FIM DO LAÇO DE REPETIÇÃO PRINCIPAL.
         PARA SAIR DO LAÇO, A VARIÁVEL MENU DEVE SER DIFERENTE
