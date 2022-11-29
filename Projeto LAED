@@ -24,7 +24,7 @@ setlocale(LC_ALL, "Portuguese");
 
     int menu = 0, porcao = 0, sobremesa = 0, bebidas = 0, decisao = 0, fim = 0;
     float batata = 12.50 , frango = 16.80, tilapia = 32.99, alcatra = 65.99;
-    float bolo = 7.99, pudim = 9.49, brigadeiro = 1.50, sorvete = 8.50;
+    float bolo = 7.99, pudim = 9.49, brigadeiro = 1.50, petit = 18.50;
     float agua = 2.00, suco = 8.49, coca = 6.99, chopp = 12.99;
     float total = 0;
 
@@ -52,26 +52,26 @@ setlocale(LC_ALL, "Portuguese");
                         scanf("%d", &porcao);
 
                             if(porcao == 1){
-                                printf("Batata Frita - R$12,50 | Adicionada ao pedido\n");
+                                printf("\nBatata Frita - R$12,50 | Adicionada ao pedido\n");
                                 total += batata;                                          
                                 }
 
                             if(porcao == 2){
-                                printf("Frango Frito - R$16,80 | Adicionada ao pedido\n");
+                                printf("\nFrango Frito - R$16,80 | Adicionada ao pedido\n");
                                 total += frango;                       
                                 }
 
                             if(porcao == 3){
-                                printf("Filé de Tilápia - R$32,99 | Adicionada ao pedido\n");
+                                printf("\nFilé de Tilápia - R$32,99 | Adicionada ao pedido\n");
                                 total += tilapia;
                                 }
 
                             if(porcao == 4){
-                                printf("Alcatra - R$65,99 | Adicionada ao pedido\n");
+                                printf("\nAlcatra - R$65,99 | Adicionada ao pedido\n");
                                 total += alcatra;
                                 }
 
-                           if((porcao!= 1) && (porcao != 2) && (porcao != 3) && (porcao != 4)){
+                           if((porcao!= 1) && (porcao != 2) && (porcao != 3) && (porcao != 4)){  //Se opção digitada diferente de 1,2,3 e 4, apaga a tela e da a mensagem
                                 system("cls");
                                 printf("Opção inválida. Porfavor, tente novamente!\n\n");
                              }
@@ -107,26 +107,26 @@ setlocale(LC_ALL, "Portuguese");
                     printf("| 1- Bolo de Chocolate  |  R$7,99  |\n");
                     printf("| 2- Pudim              |  R$9,49  |\n");
                     printf("| 3- Brigadeiro         |  R$1,50  |\n");
-                    printf("| 4- Sorvete            |  R$8,50  |\n");
+                    printf("| 4- Petit Gateau       |  R$18,50 |\n");
                     printf("|    Qual opção deseja abrir?      |\n");
                     printf("-----------------------------------\n");
                     scanf("%d", &sobremesa);
 
                             if(sobremesa == 1){
-                                printf("Bolo de Chocolate - R$7,99 | Adicionada ao pedido\n");
+                                printf("\nBolo de Chocolate - R$7,99 | Adicionada ao pedido\n");
                                 total += bolo;
                               }
                             if(sobremesa == 2){
-                                printf("Pudim - R$9,49 | Adicionada ao pedido\n");
+                                printf("\nPudim - R$9,49 | Adicionada ao pedido\n");
                                 total += pudim;
                               }
                             if(sobremesa == 3){
-                                printf("Brigadeiro - R$1,50 | Adicionada ao pedido\n");
+                                printf("\nBrigadeiro - R$1,50 | Adicionada ao pedido\n");
                                 total += brigadeiro;
                               }
                             if(sobremesa == 4){
-                                printf("Sorvete - R$8,50 | Adicionada ao pedido\n");
-                                total += sorvete;
+                                printf("\nPetit Gateau - R$18,50 | Adicionada ao pedido\n");
+                                total += petit;
                               }
                              if((sobremesa != 1) && (sobremesa != 2) && (sobremesa != 3) && (sobremesa != 4)){
                                 system("cls");
@@ -158,28 +158,28 @@ setlocale(LC_ALL, "Portuguese");
        if(menu == 3){
 
                     printf("--------------BEBIDAS-------------\n");
-                    printf("| 1- Água        |   R$2,00      |\n");
-                    printf("| 2- Suco        |   R$8,49      |\n");
-                    printf("| 3- Coca-Cola   |   R$6,99      |\n");
-                    printf("| 4- Chopp       |   R$12,99     |\n");
-                    printf("|    Qual opção deseja abrir?    |\n");
+                    printf("| 1- Água            |   R$2,00   |\n");
+                    printf("| 2- Suco de Laranja |   R$8,49   |\n");
+                    printf("| 3- Coca-Cola       |   R$6,99   |\n");
+                    printf("| 4- Chopp           |   R$12,99  |\n");
+                    printf("|    Qual opção deseja abrir?     |\n");
                     printf("-----------------------------------\n");
                     scanf("%d", &bebidas);
 
                             if(bebidas == 1){
-                                printf("Água - R$2,00 | Adicionada ao pedido\n");
+                                printf("\nÁgua - R$2,00 | Adicionada ao pedido\n");
                                 total += agua;
                              }
                             if(bebidas == 2){
-                                printf("Suco - R$8,49 | Adicionada ao pedido\n");
+                                printf("\nSuco de Laranja - R$8,49 | Adicionada ao pedido\n");
                                 total += suco;
                              }
                             if(bebidas == 3){
-                                printf("Coca-Cola - R$6,99 | Adicionada ao pedido\n");
+                                printf("\nCoca-Cola - R$6,99 | Adicionada ao pedido\n");
                                 total += coca;
                              }
                             if(bebidas == 4){
-                                printf("Chopp - R$12,99 | Adicionada ao pedido\n");
+                                printf("\nChopp - R$12,99 | Adicionada ao pedido\n");
                                 total += chopp;
                              }
                             if((bebidas!= 1) && (bebidas != 2) && (bebidas != 3) && (bebidas != 4)){
