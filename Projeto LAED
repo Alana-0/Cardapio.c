@@ -54,22 +54,28 @@ setlocale(LC_ALL, "Portuguese");
 
                         if(porcao == 1){
                             printf("Batata Frita - R$12,50 | Adicionada ao pedido\n");
-                            total += batata;}
+                            total += batata;
+                            }
 
                         if(porcao == 2){
                             printf("Frango Frito - R$16,80 | Adicionada ao pedido\n");
-                            total += frango;}
+                            total += frango;
+                            }
 
                         if(porcao == 3){
                             printf("Filé de Tilápia - R$32,99 | Adicionada ao pedido\n");
-                            total += tilapia;}
+                            total += tilapia;
+                            }
 
                         if(porcao == 4){
                             printf("Alcatra - R$65,99 | Adicionada ao pedido\n");
-                            total += alcatra;}
-                        if(porcao != 1 || porcao != 2 || porcao != 3 || porcao != 4){
-                                     printf("Opção inválida. Porfavor, tente novamente!");
-                                     break;}
+                            total += alcatra;
+                            }
+
+                        if(porcao != 1 && porcao != 2 && porcao != 3 &&
+                            porcao != 4){
+                            printf("Opção inválida. Porfavor, tente novamente!");
+                            }
 
                     printf("\nDeseja algo mais?\n");
                     printf("1- Sim\n");
@@ -81,11 +87,11 @@ setlocale(LC_ALL, "Portuguese");
                         }
                         if(decisao == 2){
                             menu = fim;
+                        }
 
                         printf("\nTotal do pedido: R$%5.2f", total);
                         printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
                         printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
-                    }
 
                     }
 
@@ -105,20 +111,24 @@ setlocale(LC_ALL, "Portuguese");
                     scanf("%d", &sobremesa);
 
                             if(sobremesa == 1){
-                            printf("Bolo de Chocolate - R$7,99 | Adicionada ao pedido\n");
-                                total += bolo;}
-                                
+                                printf("Bolo de Chocolate - R$7,99 | Adicionada ao pedido\n");
+                                total += bolo;
+                                }
+
                             if(sobremesa == 2){
-                            printf("Pudim - R$9,49 | Adicionada ao pedido\n");
-                                total += pudim;}
-                                
+                                printf("Pudim - R$9,49 | Adicionada ao pedido\n");
+                                total += pudim;
+                                }
+
                             if(sobremesa == 3){
-                            printf("Brigadeiro - R$1,50 | Adicionada ao pedido\n");
-                                total += brigadeiro;}
-                                
+                                printf("Brigadeiro - R$1,50 | Adicionada ao pedido\n");
+                                total += brigadeiro;
+                                }
+
                             if(sobremesa == 4){
-                            printf("Petit Gateau - R$19,80 | Adicionada ao pedido\n");
-                                total += sorvete;}
+                                printf("Petit Gateau - R$19,80 | Adicionada ao pedido\n");
+                                total += petit;
+                                }
 
                         printf("\nDeseja algo mais?\n");
                         printf("1- Sim\n");
@@ -126,15 +136,17 @@ setlocale(LC_ALL, "Portuguese");
                         scanf("%d", &decisao);
 
                             if(decisao == 1){
-                            system("cls");}
+                            system("cls");
+                            }
 
                             if(decisao == 2){
                             menu = fim;
+                            }
 
                             printf("\nTotal do pedido: R$%5.2f", total);
                             printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
                             printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
-                        }
+
                     }
 
         //====================================================================================================
@@ -154,15 +166,15 @@ setlocale(LC_ALL, "Portuguese");
                             if(sobremesa == 1)
                             printf("Água - R$2,00 | Adicionada ao pedido\n");
                                 total += agua;
-                                
+
                             if(sobremesa == 2)
                             printf("Suco de Laranja - R$8,49 | Adicionada ao pedido\n");
                                 total += suco;
-                                
+
                             if(sobremesa == 3)
                             printf("Coca-Cola - R$6,99 | Adicionada ao pedido\n");
                                 total += coca;
-                                
+
                             if(sobremesa == 4)
                             printf("Chopp - R$12,99 | Adicionada ao pedido\n");
                                 total += chopp;
@@ -188,4 +200,4 @@ setlocale(LC_ALL, "Portuguese");
         }while(menu != fim);
 
 return(0);
- }
+}
