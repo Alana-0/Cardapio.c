@@ -28,7 +28,6 @@ setlocale(LC_ALL, "Portuguese");
     float total = 0;
 
         do{
-           do{
             printf("---------- PORÇÕES & CIA ----------\n\n");
             printf("----------------MENU---------------\n");
             printf("| 1- Porções                       |\n");
@@ -37,11 +36,6 @@ setlocale(LC_ALL, "Portuguese");
             printf("|    Qual opção deseja abrir?      |\n");
             printf("-----------------------------------\n");
             scanf("%d", &menu);
-
-                if(menu != 1 || menu != 2 || menu !=3){
-                printf("Opção inválida. Porfavor, tente novamente!\n\n");
-               }
-                    }while (menu != 1 || menu != 2 || menu !=3);
 
 
 
