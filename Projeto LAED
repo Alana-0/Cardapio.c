@@ -13,7 +13,7 @@
             COM BASE NO TEMA PROPOSTO, DESENVOLVEMOS ESTE SOFTWARE COM O OBJETIVO DE APRESENTAR UM CARDÁPIO AO CLIENTE
         DE UM RESTAURANTE ESPECIALIZADO EM PORÇÕES.
 
-    ALUNOS: ALANA BARBOSA, GUSTAVO MACIEL, STELLA DO BEM
+    ALUNOS: ALANA BARBOSA, GUSTAVO MACIEL, STELLA DO BEM.
     ORIENTADOR: Prof.Dr. CLAUDIO CORREA
 */
 
@@ -23,7 +23,7 @@ setlocale(LC_ALL, "Portuguese");
 
     int menu = 0, porcao = 0, sobremesa = 0, bebidas = 0, decisao = 0, fim = 0;
     float batata = 12.50 , frango = 16.80, tilapia = 32.99, alcatra = 65.99;
-    float bolo = 7.99, pudim = 9.49, brigadeiro = 1.50, sorvete = 8.50;
+    float bolo = 7.99, pudim = 9.49, brigadeiro = 1.50, petit = 19.80;
     float agua = 2.00, suco = 8.49, coca = 6.99, chopp = 12.99;
     float total = 0;
 
@@ -49,7 +49,7 @@ setlocale(LC_ALL, "Portuguese");
        //Option PORÇÃO
 
                 if(menu==1){
-                    printf("-----------------------------------\n");
+                    printf("------------------------------------\n");
                     printf("| 1- Batata Frita     |   R$12,50  |\n");
                     printf("| 2- Frango Frito     |   R$16,80  |\n");
                     printf("| 3- Filé de tilápia  |   R$32,99  |\n");
@@ -105,19 +105,26 @@ setlocale(LC_ALL, "Portuguese");
                     printf("| 1- Bolo de Chocolate  |  R$7,99  |\n");
                     printf("| 2- Pudim              |  R$9,49  |\n");
                     printf("| 3- Brigadeiro         |  R$1,50  |\n");
-                    printf("| 4- Sorvete            |  R$8,50  |\n");
+                    printf("| 4- Petit Gateau       |  R$19,80 |\n");
                     printf("|    Qual opção deseja abrir?      |\n");
-                    printf("-----------------------------------\n");
+                    printf("------------------------------------\n");
                     scanf("%d", &sobremesa);
 
-                            if(sobremesa == 1)
-                                total += bolo;
-                            if(sobremesa == 2)
-                                total += pudim;
-                            if(sobremesa == 3)
-                                total += brigadeiro;
-                            if(sobremesa == 4)
-                                total += sorvete;
+                            if(sobremesa == 1){
+                            printf("Bolo de Chocolate - R$7,99 | Adicionada ao pedido\n");
+                                total += bolo;}
+                                
+                            if(sobremesa == 2){
+                            printf("Pudim - R$9,49 | Adicionada ao pedido\n");
+                                total += pudim;}
+                                
+                            if(sobremesa == 3){
+                            printf("Brigadeiro - R$1,50 | Adicionada ao pedido\n");
+                                total += brigadeiro;}
+                                
+                            if(sobremesa == 4){
+                            printf("Petit Gateau - R$19,80 | Adicionada ao pedido\n");
+                                total += sorvete;}
 
                         printf("\nDeseja algo mais?\n");
                         printf("1- Sim\n");
@@ -141,22 +148,29 @@ setlocale(LC_ALL, "Portuguese");
 
        if(menu == 3){
 
-                    printf("-----------------------------------\n");
-                    printf("| 1- Água        |   R$2,00      |\n");
-                    printf("| 2- Suco        |   R$8,49      |\n");
-                    printf("| 3- Coca-Cola   |   R$6,99      |\n");
-                    printf("| 4- Chopp       |   R$12,99     |\n");
-                    printf("|    Qual opção deseja abrir?    |\n");
-                    printf("-----------------------------------\n");
+                    printf("------------------------------------\n");
+                    printf("| 1- Água             |   R$2,00   |\n");
+                    printf("| 2- Suco de Laranja  |   R$8,49   |\n");
+                    printf("| 3- Coca-Cola        |   R$6,99   |\n");
+                    printf("| 4- Chopp            |   R$12,99  |\n");
+                    printf("|    Qual opção deseja abrir?      |\n");
+                    printf("------------------------------------\n");
                     scanf("%d", &bebidas);
 
                             if(sobremesa == 1)
+                            printf("Água - R$2,00 | Adicionada ao pedido\n");
                                 total += agua;
+                                
                             if(sobremesa == 2)
+                            printf("Suco de Laranja - R$8,49 | Adicionada ao pedido\n");
                                 total += suco;
+                                
                             if(sobremesa == 3)
+                            printf("Coca-Cola - R$6,99 | Adicionada ao pedido\n");
                                 total += coca;
+                                
                             if(sobremesa == 4)
+                            printf("Chopp - R$12,99 | Adicionada ao pedido\n");
                                 total += chopp;
 
                         printf("\nDeseja algo mais?\n");
