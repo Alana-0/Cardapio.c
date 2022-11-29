@@ -102,11 +102,11 @@ setlocale(LC_ALL, "Portuguese");
                 if(menu == 2){
 
                     printf("-----------------------------------\n");
-                    printf("| 1- Bolo de Chocolate - R$7,99   |\n");
-                    printf("| 2- Pudim - R$9,49               |\n");
-                    printf("| 3- Brigadeiro - R$1,50          |\n");
-                    printf("| 4- Sorvete - R$8,50             |\n");
-                    printf("|    Qual opção deseja abrir?     |\n");
+                    printf("| 1- Bolo de Chocolate  |  R$7,99  |\n");
+                    printf("| 2- Pudim              |  R$9,49  |\n");
+                    printf("| 3- Brigadeiro         |  R$1,50  |\n");
+                    printf("| 4- Sorvete            |  R$8,50  |\n");
+                    printf("|    Qual opção deseja abrir?      |\n");
                     printf("-----------------------------------\n");
                     scanf("%d", &sobremesa);
 
@@ -142,11 +142,11 @@ setlocale(LC_ALL, "Portuguese");
        if(menu == 3){
 
                     printf("-----------------------------------\n");
-                    printf("| 1- Água - R$2,00                |\n");
-                    printf("| 2- Suco - R$8,49                |\n");
-                    printf("| 3- Coca-Cola - R$6,99           |\n");
-                    printf("| 4- Chopp - R$12,99              |\n");
-                    printf("|    Qual opção deseja abrir?     |\n");
+                    printf("| 1- Água        |   R$2,00      |\n");
+                    printf("| 2- Suco        |   R$8,49      |\n");
+                    printf("| 3- Coca-Cola   |   R$6,99      |\n");
+                    printf("| 4- Chopp       |   R$12,99     |\n");
+                    printf("|    Qual opção deseja abrir?    |\n");
                     printf("-----------------------------------\n");
                     scanf("%d", &bebidas);
 
