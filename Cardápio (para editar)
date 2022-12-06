@@ -24,7 +24,6 @@
 struct porcao {
    char prato[256];
    float valor;
-   //unsigned int meia;
 };
 typedef struct porcao porcao_t;
 
@@ -136,31 +135,30 @@ setlocale(LC_ALL, "Portuguese");
                                     menu = fim;
                                     system("cls");
 
+                                /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO,
+                                SERÁ INVOCADO A FUNÇÃO PORÇÃO E APRESENTADO
+                                A LISTA DE ITENS COM SEUS VALORES. SERÁ MOSTRADO
+                                TAMBÉM O VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME
+                                A MESMA FOI ACUMULANDO VALORES DE ACORDO COM O PEDIDOS.*/
+
                                         //INVOCANDO A FUNÇÃO
                                         porcao_t principal[TAMANHO] = {0};
                                         inicializa_porcao(principal);
 
                                     printf("Prato Porção = %s\n", principal[0].prato);
                                     printf("Valor do Prato = %5.2f\n", principal[0].valor);
-                                    // printf("principal[0].meia = %u\n\n", principal[0].meia);
 
                                     printf("Prato Porção = %s\n", principal[1].prato);
                                     printf("Valor do Prato = %5.2f\n", principal[1].valor);
-                                    // printf("principal[3].meia = %u\n\n", principal[1].meia);
 
                                     printf("Prato Porção = %s\n", principal[2].prato);
                                     printf("Valor do Prato = %5.2f\n", principal[2].valor);
-                                    // printf("principal[3].meia = %u\n\n", principal[2].meia);
 
                                     printf("Prato Porção = %s\n", principal[3].prato);
                                     printf("Valor do Prato = %5.2f\n", principal[3].valor);
-                                    // printf("principal[3].meia = %u\n\n", principal[3].meia);
 
-                                    printf("===================================================");
+                                    printf("\n===================================================\n");
 
-                                    /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
-                                        VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
-                                        VALORES DE ACORDO COM O PEDIDOS */
                                     printf("\nTotal do pedido: R$%5.2f", total);
                                     printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
                                     printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
@@ -226,6 +224,12 @@ setlocale(LC_ALL, "Portuguese");
                             menu = fim;
                             system("cls");
 
+                            /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO,
+                            SERÁ INVOCADO A FUNÇÃO SOBREMESA E APRESENTADO
+                            A LISTA DE ITENS COM SEUS VALORES. SERÁ MOSTRADO
+                            TAMBÉM O VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME
+                            A MESMA FOI ACUMULANDO VALORES DE ACORDO COM O PEDIDOS.*/
+
                                 //INVOCANDO A FUNÇÃO
                                 sobremesa_itens principal[TAMANHO] = {0};
                                 inicializa_sobremesa(principal);
@@ -242,11 +246,8 @@ setlocale(LC_ALL, "Portuguese");
                             printf("Prato Sobremesa = %s\n", principal[3].prato);
                             printf("Valor do Prato = %5.2f\n", principal[3].valor);
 
-                            printf("===================================================");
+                            printf("\n===================================================\n");
 
-                            /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
-                                VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
-                                VALORES DE ACORDO COM O PEDIDOS */
                             printf("\nTotal do pedido: R$%5.2f", total);
                             printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
                             printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
@@ -312,6 +313,12 @@ setlocale(LC_ALL, "Portuguese");
                                     menu = fim;
                                     system("cls");
 
+                                    /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO,
+                                    SERÁ INVOCADO A FUNÇÃO BEBIDA E APRESENTADO
+                                    A LISTA DE ITENS COM SEUS VALORES. SERÁ MOSTRADO
+                                    TAMBÉM O VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME
+                                    A MESMA FOI ACUMULANDO VALORES DE ACORDO COM O PEDIDOS.*/
+
                                         //INVOCANDO A FUNÇÃO
                                         bebida_itens principal[TAMANHO] = {0};
                                         inicializa_bebida(principal);
@@ -328,11 +335,8 @@ setlocale(LC_ALL, "Portuguese");
                                     printf("Chopp = %s\n", principal[3].copo);
                                     printf("Valor do Prato = %5.2f\n", principal[3].valor);
 
-                                    printf("===================================================");
+                                    printf("\n===================================================\n");
 
-                                    /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
-                                        VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
-                                        VALORES DE ACORDO COM O PEDIDOS */
                                     printf("\nTotal do pedido: R$%5.2f", total);
                                     printf("\nSEU PEDIDO ESTÁ SENDO PREPARADO!\n");
                                     printf("\nOBRIGADO PELA CONFIANÇA!!!\n");
@@ -363,19 +367,15 @@ void inicializa_porcao(porcao_t principal[]) {
 
       strncpy(principal[0].prato, "batata frita", 12);
       principal[0].valor = 12.5;
-      //principal[0].meia = 0;
 
       strncpy(principal[1].prato, "frango", 7);
       principal[1].valor = 16.80;
-      //principal[1].meia = 0;
 
       strncpy(principal[2].prato, "tilápia", 7);
       principal[2].valor = 32.99;
-      //principal[2].meia = 0;
 
       strncpy(principal[3].prato, "alcatra", 8);
       principal[3].valor = 65.99;
-      //principal[3].meia = 0;
 
 return;
 }
@@ -415,4 +415,3 @@ return;
 
         return;
         }
-
