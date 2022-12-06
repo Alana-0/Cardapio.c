@@ -21,7 +21,7 @@
 */
 
 
-
+//ESTRUTURA DE DEDAS PARA PORÇÃO
 struct porcao {
    char prato[256];
    float valor;
@@ -29,23 +29,27 @@ struct porcao {
 };
 typedef struct porcao porcao_t;
 
+    //ESTRUTURA DE DEDAS PARA SOBREMESA
     struct sobremesa {
         char prato[256];
         float valor;
     };
     typedef struct sobremesa sobremesa_itens;
 
+        //ESTRUTURA DE DEDAS PARA BEBIDAS
         struct bebida {
             char copo[256];
             float valor;
         };
         typedef struct bebida bebida_itens;
 
-
+//INICIALIZA A FUNÇÃO PASSANDO SEU ARGUMENTO
 void inicializa_porcao(porcao_t principal[]);
 
+    //INICIALIZA A FUNÇÃO PASSANDO SEU ARGUMENTO
     void inicializa_sobremesa(sobremesa_itens principal[]);
-    
+
+        //INICIALIZA A FUNÇÃO PASSANDO SEU ARGUMENTO
         void inicializa_bebida (bebida_itens principal[]);
 
 
@@ -133,6 +137,7 @@ setlocale(LC_ALL, "Portuguese");
                                     menu = fim;
                                     system("cls");
 
+                                        //INVOCANDO A FUNÇÃO
                                         porcao_t principal[TAMANHO] = {0};
                                         inicializa_porcao(principal);
 
@@ -222,9 +227,10 @@ setlocale(LC_ALL, "Portuguese");
                             menu = fim;
                             system("cls");
 
+                                //INVOCANDO A FUNÇÃO
                                 sobremesa_itens principal[TAMANHO] = {0};
                                 inicializa_sobremesa(principal);
-    
+
                             printf("Prato Sobremesa = %s\n", principal[0].prato);
                             printf("Valor do Prato = %5.2f\n", principal[0].valor);
 
@@ -307,6 +313,7 @@ setlocale(LC_ALL, "Portuguese");
                                     menu = fim;
                                     system("cls");
 
+                                        //INVOCANDO A FUNÇÃO
                                         bebida_itens principal[TAMANHO] = {0};
                                         inicializa_bebida(principal);
 
@@ -323,7 +330,7 @@ setlocale(LC_ALL, "Portuguese");
                                     printf("Valor do Prato = %5.2f\n", principal[3].valor);
 
                                     printf("===================================================");
-                                    
+
                                     /* AO SAIR DO LAÇO, TENDO O PEDIDO ENCERRADO, SERÁ APRESENTADO O
                                         VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME A MESMA FOI ACUMULANDO
                                         VALORES DE ACORDO COM O PEDIDOS */
@@ -352,7 +359,7 @@ setlocale(LC_ALL, "Portuguese");
 return(0);
 }
 
-
+//FUNÇÃO PORÇÃO
 void inicializa_porcao(porcao_t principal[]) {
 
       strncpy(principal[0].prato, "batata frita", 12);
@@ -374,7 +381,7 @@ void inicializa_porcao(porcao_t principal[]) {
 return;
 }
 
-
+    //FUNÇÃO SOBREMESA
     void inicializa_sobremesa(sobremesa_itens principal[]) {
 
         strncpy(principal[0].prato, "Bolo", 5);
@@ -392,20 +399,21 @@ return;
     return;
     }
 
-
+        //FUNÇÃO BEBIDA
         void inicializa_bebida(bebida_itens principal[]) {
-            
+
             strncpy(principal[0].copo, "Água", 5);
             principal[0].valor = 2.00;
-            
+
             strncpy(principal[1].copo, "Suco de Laranja", 16);
             principal[1].valor = 8.49;
-            
+
             strncpy(principal[2].copo, "Coca-Cola", 10);
             principal[2].valor = 6.99;
-            
+
             strncpy(principal[3].copo, "Chopp", 6);
             principal[3].valor = 12.99;
-            
+
         return;
         }
+
