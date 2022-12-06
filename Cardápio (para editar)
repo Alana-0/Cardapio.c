@@ -145,17 +145,25 @@ setlocale(LC_ALL, "Portuguese");
                                         porcao_t principal[TAMANHO] = {0};
                                         inicializa_porcao(principal);
 
-                                    printf("Prato Porção = %s\n", principal[0].prato);
-                                    printf("Valor do Prato = %5.2f\n", principal[0].valor);
+                                    if(porcao == 1){
+                                        printf("Prato Porção = %s\n", principal[0].prato);
+                                        printf("Valor do Prato = %5.2f\n", principal[0].valor);
+                                        }
 
-                                    printf("Prato Porção = %s\n", principal[1].prato);
-                                    printf("Valor do Prato = %5.2f\n", principal[1].valor);
+                                    if(porcao == 2){
+                                        printf("Prato Porção = %s\n", principal[1].prato);
+                                        printf("Valor do Prato = %5.2f\n", principal[1].valor);
+                                        }
 
-                                    printf("Prato Porção = %s\n", principal[2].prato);
-                                    printf("Valor do Prato = %5.2f\n", principal[2].valor);
+                                    if(porcao == 3){
+                                        printf("Prato Porção = %s\n", principal[2].prato);
+                                        printf("Valor do Prato = %5.2f\n", principal[2].valor);
+                                        }
 
-                                    printf("Prato Porção = %s\n", principal[3].prato);
-                                    printf("Valor do Prato = %5.2f\n", principal[3].valor);
+                                    if(porcao == 4){
+                                        printf("Prato Porção = %s\n", principal[3].prato);
+                                        printf("Valor do Prato = %5.2f\n", principal[3].valor);
+                                        }
 
                                     printf("\n===================================================\n");
 
@@ -234,17 +242,25 @@ setlocale(LC_ALL, "Portuguese");
                                 sobremesa_itens principal[TAMANHO] = {0};
                                 inicializa_sobremesa(principal);
 
-                            printf("Prato Sobremesa = %s\n", principal[0].prato);
-                            printf("Valor do Prato = %5.2f\n", principal[0].valor);
+                            if(sobremesa == 1){
+                                printf("Prato Sobremesa = %s\n", principal[0].prato);
+                                printf("Valor do Prato = %5.2f\n", principal[0].valor);
+                                }
 
-                            printf("Prato Sobremesa = %s\n", principal[1].prato);
-                            printf("Valor do Prato = %5.2f\n", principal[1].valor);
+                            if(sobremesa == 2){
+                                printf("Prato Sobremesa = %s\n", principal[1].prato);
+                                printf("Valor do Prato = %5.2f\n", principal[1].valor);
+                                }
 
-                            printf("Prato Sobremesa = %s\n", principal[2].prato);
-                            printf("Valor do Prato = %5.2f\n", principal[2].valor);
+                            if(sobremesa == 3){
+                                printf("Prato Sobremesa = %s\n", principal[2].prato);
+                                printf("Valor do Prato = %5.2f\n", principal[2].valor);
+                                }
 
-                            printf("Prato Sobremesa = %s\n", principal[3].prato);
-                            printf("Valor do Prato = %5.2f\n", principal[3].valor);
+                            if(sobremesa == 4){
+                                printf("Prato Sobremesa = %s\n", principal[3].prato);
+                                printf("Valor do Prato = %5.2f\n", principal[3].valor);
+                                }
 
                             printf("\n===================================================\n");
 
@@ -271,22 +287,22 @@ setlocale(LC_ALL, "Portuguese");
                                 printf("\nÁgua - R$2,00 | Adicionada ao pedido\n");
                                 //VARIÁVEL TOTAL ASSUME E RECEBE O VALOR FLOAT DA VARIÁVEL AGUA
                                 total += agua;
-                             }
+                                }
                             if(bebidas == 2){
                                 printf("\nSuco de Laranja - R$8,49 | Adicionada ao pedido\n");
                                 //VARIÁVEL TOTAL ASSUME E RECEBE O VALOR FLOAT DA VARIÁVEL SUCO
                                 total += suco;
-                             }
+                                }
                             if(bebidas == 3){
                                 printf("\nCoca-Cola - R$6,99 | Adicionada ao pedido\n");
                                 //VARIÁVEL TOTAL ASSUME E RECEBE O VALOR FLOAT DA VARIÁVEL COCA
                                 total += coca;
-                             }
+                                }
                             if(bebidas == 4){
                                 printf("\nChopp - R$12,99 | Adicionada ao pedido\n");
                                 //VARIÁVEL TOTAL ASSUME E RECEBE O VALOR FLOAT DA VARIÁVEL CHOPP
                                 total += chopp;
-                             }
+                                }
 
                             //SE OPÇÃO DIGITADA FOR DIFERENTE DE 1,2,3 e 4, APAGA A TELA E IMPRIME A MENSAGEM DE OPÇÃO INVÁLIDA
                             if((bebidas!= 1) && (bebidas != 2) && (bebidas != 3) && (bebidas != 4)){
@@ -296,7 +312,7 @@ setlocale(LC_ALL, "Portuguese");
                                 getchar();
                                 getchar();
                                 system("cls");
-                            }
+                                }
                             else{
                                 printf("\nDeseja algo mais?\n");
                                 printf("1- Sim\n");
@@ -306,7 +322,7 @@ setlocale(LC_ALL, "Portuguese");
                                 //SE SELECIONADO 1 MANTÉM DENTRO DO LAÇO DE REPETÇÃO
                                 if(decisao == 1){
                                     system("cls");
-                                }
+                                    }
 
                                 //SE SELECIONADO 2 SAI DO LAÇO DE REPETIÇÃO
                                 if(decisao == 2){
@@ -323,17 +339,25 @@ setlocale(LC_ALL, "Portuguese");
                                         bebida_itens principal[TAMANHO] = {0};
                                         inicializa_bebida(principal);
 
-                                    printf("Água = %s\n", principal[0].copo);
-                                    printf("Valor = %5.2f\n", principal[0].valor);
+                                    if(bebidas == 1){
+                                        printf("Água = %s\n", principal[0].copo);
+                                        printf("Valor = %5.2f\n", principal[0].valor);
+                                        }
 
-                                    printf("Suco de Laranja = %s\n", principal[1].copo);
-                                    printf("Valor do Prato = %5.2f\n", principal[1].valor);
+                                    if(bebidas == 2){
+                                        printf("Suco de Laranja = %s\n", principal[1].copo);
+                                        printf("Valor do Prato = %5.2f\n", principal[1].valor);
+                                        }
 
-                                    printf("Coca-Cola = %s\n", principal[2].copo);
-                                    printf("Valor do Prato = %5.2f\n", principal[2].valor);
+                                    if(bebidas == 3){
+                                        printf("Coca-Cola = %s\n", principal[2].copo);
+                                        printf("Valor do Prato = %5.2f\n", principal[2].valor);
+                                        }
 
-                                    printf("Chopp = %s\n", principal[3].copo);
-                                    printf("Valor do Prato = %5.2f\n", principal[3].valor);
+                                    if(bebidas == 4){
+                                        printf("Chopp = %s\n", principal[3].copo);
+                                        printf("Valor do Prato = %5.2f\n", principal[3].valor);
+                                        }
 
                                     printf("\n===================================================\n");
 
