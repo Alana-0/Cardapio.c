@@ -20,7 +20,7 @@
 */
 
 
-//ESTRUTURA DE DEDAS PARA PORÇÃO
+//ESTRUTURA DE DADOS PARA PORÇÃO
 struct porcao {
    char prato[256];
    float valor;
@@ -28,14 +28,14 @@ struct porcao {
 };
 typedef struct porcao porcao_t;
 
-    //ESTRUTURA DE DEDAS PARA SOBREMESA
+    //ESTRUTURA DE DADOS PARA SOBREMESA
     struct sobremesa {
         char prato[256];
         float valor;
     };
     typedef struct sobremesa sobremesa_itens;
 
-        //ESTRUTURA DE DEDAS PARA BEBIDAS
+        //ESTRUTURA DE DADOS PARA BEBIDAS
         struct bebida {
             char copo[256];
             float valor;
