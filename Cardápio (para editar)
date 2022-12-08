@@ -27,28 +27,24 @@ struct porcao {
 };
 typedef struct porcao porcao_t;
 
-    //ESTRUTURA DE DADOS PARA SOBREMESA
-    struct sobremesa {
-        char prato[256];
-        float valor;
-    };
-    typedef struct sobremesa sobremesa_itens;
+//ESTRUTURA DE DADOS PARA SOBREMESA
+struct sobremesa {
+    char prato[256];
+    float valor;
+};
+typedef struct sobremesa sobremesa_itens;
 
-        //ESTRUTURA DE DADOS PARA BEBIDAS
-        struct bebida {
-            char copo[256];
-            float valor;
-        };
-        typedef struct bebida bebida_itens;
+//ESTRUTURA DE DADOS PARA BEBIDAS
+struct bebida {
+    char copo[256];
+    float valor;
+};
+typedef struct bebida bebida_itens;
 
-//INICIALIZA A FUNÇÃO PASSANDO SEU ARGUMENTO
+//DECLARAÇÕES DAS FUNÇÕES
 void inicializa_porcao(porcao_t principal[]);
-
-    //INICIALIZA A FUNÇÃO PASSANDO SEU ARGUMENTO
-    void inicializa_sobremesa(sobremesa_itens principal[]);
-
-        //INICIALIZA A FUNÇÃO PASSANDO SEU ARGUMENTO
-        void inicializa_bebida (bebida_itens principal[]);
+void inicializa_sobremesa(sobremesa_itens principal[]);
+void inicializa_bebida (bebida_itens principal[]);
 
 
 int main(void){
@@ -61,6 +57,7 @@ setlocale(LC_ALL, "Portuguese");
     float bolo = 7.99, pudim = 9.49, brigadeiro = 1.50, petit = 18.50;
     float agua = 2.00, suco = 8.49, coca = 6.99, chopp = 12.99;
     float total = 0;
+    char carrinho[256];
 
             //INÍCIO DO LAÇO DE REPETIÇÃO PRINCIPAL
             do{
@@ -141,29 +138,22 @@ setlocale(LC_ALL, "Portuguese");
                                 TAMBÉM O VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME
                                 A MESMA FOI ACUMULANDO VALORES DE ACORDO COM O PEDIDOS.*/
 
-                                        //INVOCANDO A FUNÇÃO
-                                        porcao_t principal[TAMANHO] = {0};
-                                        inicializa_porcao(principal);
+                                //INVOCANDO A FUNÇÃO
+                                porcao_t principal[TAMANHO] = {0};
+                                inicializa_porcao(principal);
 
-                                    if(porcao == 1){
-                                        printf("Prato Porção = %s\n", principal[0].prato);
-                                        printf("Valor do Prato = %5.2f\n", principal[0].valor);
-                                        }
+                                    //IMPRIME NA TELA A LISTA DE ITENS E SEUS RESPECTIVOS VALORES
+                                    printf("Prato Porção = %s\n", principal[0].prato);
+                                    printf("Valor do Prato(em R$) = %5.2f\n", principal[0].valor);
 
-                                    if(porcao == 2){
-                                        printf("Prato Porção = %s\n", principal[1].prato);
-                                        printf("Valor do Prato = %5.2f\n", principal[1].valor);
-                                        }
+                                    printf("Prato Porção = %s\n", principal[1].prato);
+                                    printf("Valor do Prato(em R$) = %5.2f\n", principal[1].valor);
 
-                                    if(porcao == 3){
-                                        printf("Prato Porção = %s\n", principal[2].prato);
-                                        printf("Valor do Prato = %5.2f\n", principal[2].valor);
-                                        }
+                                    printf("Prato Porção = %s\n", principal[2].prato);
+                                    printf("Valor do Prato(em R$) = %5.2f\n", principal[2].valor);
 
-                                    if(porcao == 4){
-                                        printf("Prato Porção = %s\n", principal[3].prato);
-                                        printf("Valor do Prato = %5.2f\n", principal[3].valor);
-                                        }
+                                    printf("Prato Porção = %s\n", principal[3].prato);
+                                    printf("Valor do Prato(em R$) = %5.2f\n", principal[3].valor);
 
                                     printf("\n===================================================\n");
 
@@ -238,29 +228,23 @@ setlocale(LC_ALL, "Portuguese");
                             TAMBÉM O VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME
                             A MESMA FOI ACUMULANDO VALORES DE ACORDO COM O PEDIDOS.*/
 
-                                //INVOCANDO A FUNÇÃO
-                                sobremesa_itens principal[TAMANHO] = {0};
-                                inicializa_sobremesa(principal);
+                        //INVOCANDO A FUNÇÃO
+                        sobremesa_itens principal[TAMANHO] = {0};
+                        inicializa_sobremesa(principal);
 
-                            if(sobremesa == 1){
-                                printf("Prato Sobremesa = %s\n", principal[0].prato);
-                                printf("Valor do Prato = %5.2f\n", principal[0].valor);
-                                }
+                            //IMPRIME NA TELA A LISTA DE ITENS E SEUS RESPECTIVOS VALORES
+                            printf("Prato Sobremesa = %s\n", principal[0].prato);
+                            printf("Valor do Prato(em R$) = %5.2f\n", principal[0].valor);
 
-                            if(sobremesa == 2){
-                                printf("Prato Sobremesa = %s\n", principal[1].prato);
-                                printf("Valor do Prato = %5.2f\n", principal[1].valor);
-                                }
+                            printf("Prato Sobremesa = %s\n", principal[1].prato);
+                            printf("Valor do Prato(em R$) = %5.2f\n", principal[1].valor);
 
-                            if(sobremesa == 3){
-                                printf("Prato Sobremesa = %s\n", principal[2].prato);
-                                printf("Valor do Prato = %5.2f\n", principal[2].valor);
-                                }
+                            printf("Prato Sobremesa = %s\n", principal[2].prato);
+                            printf("Valor do Prato(em R$) = %5.2f\n", principal[2].valor);
 
-                            if(sobremesa == 4){
-                                printf("Prato Sobremesa = %s\n", principal[3].prato);
-                                printf("Valor do Prato = %5.2f\n", principal[3].valor);
-                                }
+                            printf("Prato Sobremesa = %s\n", principal[3].prato);
+                            printf("Valor do Prato(em R$) = %5.2f\n", principal[3].valor);
+
 
                             printf("\n===================================================\n");
 
@@ -335,29 +319,22 @@ setlocale(LC_ALL, "Portuguese");
                                     TAMBÉM O VALOR FLOAT DA VARIÁVEL TOTAL, CONFORME
                                     A MESMA FOI ACUMULANDO VALORES DE ACORDO COM O PEDIDOS.*/
 
-                                        //INVOCANDO A FUNÇÃO
-                                        bebida_itens principal[TAMANHO] = {0};
-                                        inicializa_bebida(principal);
+                                //INVOCANDO A FUNÇÃO
+                                bebida_itens principal[TAMANHO] = {0};
+                                inicializa_bebida(principal);
 
-                                    if(bebidas == 1){
-                                        printf("Água = %s\n", principal[0].copo);
-                                        printf("Valor = %5.2f\n", principal[0].valor);
-                                        }
+                                    //IMPRIME NA TELA A LISTA DE ITENS E SEUS RESPECTIVOS VALORES
+                                    printf("Água = %s\n", principal[0].copo);
+                                    printf("Valor(em R$) = %5.2f\n", principal[0].valor);
 
-                                    if(bebidas == 2){
-                                        printf("Suco de Laranja = %s\n", principal[1].copo);
-                                        printf("Valor do Prato = %5.2f\n", principal[1].valor);
-                                        }
+                                    printf("Suco de Laranja = %s\n", principal[1].copo);
+                                    printf("Valor(em R$) = %5.2f\n", principal[1].valor);
 
-                                    if(bebidas == 3){
-                                        printf("Coca-Cola = %s\n", principal[2].copo);
-                                        printf("Valor do Prato = %5.2f\n", principal[2].valor);
-                                        }
+                                    printf("Coca-Cola = %s\n", principal[2].copo);
+                                    printf("Valor(em R$) = %5.2f\n", principal[2].valor);
 
-                                    if(bebidas == 4){
-                                        printf("Chopp = %s\n", principal[3].copo);
-                                        printf("Valor do Prato = %5.2f\n", principal[3].valor);
-                                        }
+                                    printf("Chopp = %s\n", principal[3].copo);
+                                    printf("Valor(em R$) = %5.2f\n", principal[3].valor);
 
                                     printf("\n===================================================\n");
 
@@ -404,38 +381,38 @@ void inicializa_porcao(porcao_t principal[]) {
 return;
 }
 
-    //FUNÇÃO SOBREMESA
-    void inicializa_sobremesa(sobremesa_itens principal[]) {
+//FUNÇÃO SOBREMESA
+void inicializa_sobremesa(sobremesa_itens principal[]) {
 
-        strncpy(principal[0].prato, "Bolo", 5);
-        principal[0].valor = 7.99;
+    strncpy(principal[0].prato, "Bolo", 5);
+    principal[0].valor = 7.99;
 
-        strncpy(principal[1].prato, "Pudim", 6);
-        principal[1].valor = 9.49;
+    strncpy(principal[1].prato, "Pudim", 6);
+    principal[1].valor = 9.49;
 
-        strncpy(principal[2].prato, "Brigadeiro", 11);
-        principal[2].valor = 1.50;
+    strncpy(principal[2].prato, "Brigadeiro", 11);
+    principal[2].valor = 1.50;
 
-        strncpy(principal[3].prato, "Petit Gateau", 13);
-        principal[3].valor = 18.50;
+    strncpy(principal[3].prato, "Petit Gateau", 13);
+    principal[3].valor = 18.50;
 
-    return;
-    }
+return;
+}
 
-        //FUNÇÃO BEBIDA
-        void inicializa_bebida(bebida_itens principal[]) {
+//FUNÇÃO BEBIDA
+void inicializa_bebida(bebida_itens principal[]) {
 
-            strncpy(principal[0].copo, "Água", 5);
-            principal[0].valor = 2.00;
+    strncpy(principal[0].copo, "Água", 5);
+    principal[0].valor = 2.00;
 
-            strncpy(principal[1].copo, "Suco de Laranja", 16);
-            principal[1].valor = 8.49;
+    strncpy(principal[1].copo, "Suco de Laranja", 16);
+    principal[1].valor = 8.49;
 
-            strncpy(principal[2].copo, "Coca-Cola", 10);
-            principal[2].valor = 6.99;
+    strncpy(principal[2].copo, "Coca-Cola", 10);
+    principal[2].valor = 6.99;
 
-            strncpy(principal[3].copo, "Chopp", 6);
-            principal[3].valor = 12.99;
+    strncpy(principal[3].copo, "Chopp", 6);
+    principal[3].valor = 12.99;
 
-        return;
-        }
+return;
+}
