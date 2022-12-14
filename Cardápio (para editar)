@@ -57,7 +57,6 @@ setlocale(LC_ALL, "Portuguese");
     float bolo = 7.99, pudim = 9.49, brigadeiro = 1.50, petit = 18.50;
     float agua = 2.00, suco = 8.49, coca = 6.99, chopp = 12.99;
     float total = 0;
-    char carrinho[256];
 
             //INÍCIO DO LAÇO DE REPETIÇÃO PRINCIPAL
             do{
@@ -366,13 +365,13 @@ return(0);
 //FUNÇÃO PORÇÃO
 void inicializa_porcao(porcao_t principal[]) {
 
-      strncpy(principal[0].prato, "batata frita", 12);
+      strncpy(principal[0].prato, "batata frita", 13);
       principal[0].valor = 12.5;
 
       strncpy(principal[1].prato, "frango", 7);
       principal[1].valor = 16.80;
 
-      strncpy(principal[2].prato, "tilápia", 7);
+      strncpy(principal[2].prato, "tilápia", 8);
       principal[2].valor = 32.99;
 
       strncpy(principal[3].prato, "alcatra", 8);
